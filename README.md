@@ -7,3 +7,9 @@ For starters, at a low level, arrays always have a fixed capacity. When you crea
 The reason we don't have to allocate memory in Ruby is Ruby handles this for us. But what if it didn't? What if we always had to specify an array's maximum capacity when we declared it?
 
 Thinking about questions like these is the kind of thing that comes up in job interviews a lot.
+
+
+Related challenges:
+https://github.com/chi-salamanders-2016/data-drill-stack-and-queue-challenge
+https://github.com/chi-salamanders-2016/data-drill-linked-list-challenge
+https://github.com/chi-salamanders-2016/review-abstract-data-structures-challenge
