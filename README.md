@@ -10,7 +10,7 @@ The reason we don't have to explicitly allocate memory for arrays in Ruby is Rub
 
 ## Release 0
 
-For this challenge, you have been given an implementation of a fixed-size array in the file [fixed_array.rb](fixed_array.rb). To complete this challenge, you should implement your own adjustable-size array in the [array_list.rb](array_list.rb) file. You must build this ArrayList class using an instance or instances of FixedArray under the hood.
+For this challenge, you have been given an implementation of a fixed-size array in the file [fixed_array.rb](fixed_array.rb). To complete this challenge, you should implement your own adjustable-size array in the [array_list.rb](array_list.rb) file. You must build this ArrayList class using an instance or instances of FixedArray under the hood. You may not use standard Ruby arrays at all.
 
 ## Release 1
 

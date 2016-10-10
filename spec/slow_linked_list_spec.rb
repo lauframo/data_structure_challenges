@@ -1,6 +1,5 @@
 require 'rspec'
-require 'byebug'
-require_relative 'slow_linked_list'
+require_relative '../slow_linked_list'
 
 class SlowLinkedList
   def self.from_array(items)

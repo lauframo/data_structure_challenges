@@ -1,4 +1,4 @@
-require_relative 'fixed_array'
+require_relative '../fixed_array'
 
 describe FixedArray do
   let(:max_size) { 32 }

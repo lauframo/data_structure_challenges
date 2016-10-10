@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'slow_array_list'
+require_relative '../slow_array_list'
 
 describe SlowArrayList do
   let(:slow_array_list) { SlowArrayList.new([:a, :b, :c, :d]) }
