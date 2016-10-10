@@ -2,11 +2,23 @@
 
 Ruby arrays are pretty convenient. It's easy to find, add, and remove elements from an array in Ruby. There's a lot going on under the hood to make it that easy. At a low level, adding, removing, and finding things in arrays isn't so simple.
 
-For starters, at a low level, arrays always have a fixed capacity. When you create an array, you need to also tell the program how much memory it should reserve for that array. If you set aside enough memory for an 8-item array, that array will never be able to be nine items long. It is fine for an array with memory space for 8 items to only have seven things in it, but it will never be able to have nine things in it.
+For starters, at a low level, arrays always have a fixed capacity. When you create an array, you need to also tell the program how much memory it should reserve for that array. If you set aside enough memory for an 8-item array, that array will never be able to be nine items long. It could be shorter than 8 items, though. Allocated memory only sets a maximum size limit, not a minimum one.
 
-The reason we don't have to allocate memory in Ruby is Ruby handles this for us. But what if it didn't? What if we always had to specify an array's maximum capacity when we declared it?
+The reason we don't have to explicitly allocate memory for arrays in Ruby is Ruby handles this for us. But what if it didn't? What if we always had to specify an array's maximum capacity when we declared it?
 
-Thinking about questions like these is the kind of thing that comes up in job interviews a lot.
+**Thinking about questions like these is the kind of thing that comes up in job interviews a lot.**
+
+## Release 0
+
+For this challenge, you have been given an implementation of a fixed-size array in the file [fixed_array.rb](fixed_array.rb). To complete this challenge, you should implement your own adjustable-size array in the [array_list.rb](array_list.rb) file. You must build this ArrayList class using an instance or instances of FixedArray under the hood.
+
+## Release 1
+
+Linked list implementation
+
+## Release 2
+
+Compare array list to linked list performance based on number of operations
 
 
 Related challenges:
