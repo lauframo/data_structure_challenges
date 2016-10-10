@@ -22,6 +22,6 @@ Compare array list to linked list performance based on number of operations
 
 
 Related challenges:
-https://github.com/chi-salamanders-2016/data-drill-stack-and-queue-challenge
-https://github.com/chi-salamanders-2016/data-drill-linked-list-challenge
-https://github.com/chi-salamanders-2016/review-abstract-data-structures-challenge
+- https://github.com/chi-salamanders-2016/data-drill-stack-and-queue-challenge
+- https://github.com/chi-salamanders-2016/data-drill-linked-list-challenge
+- https://github.com/chi-salamanders-2016/review-abstract-data-structures-challenge
