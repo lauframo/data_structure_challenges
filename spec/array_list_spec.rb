@@ -41,8 +41,8 @@ describe ArrayList do
         .to raise_error(ArrayList::OutOfBoundsError)
     end
 
-    it "fails on an index > size-1" do
-      expect { array_list.get(max_size + 1) }
+    it "fails on an index > length-1" do
+      expect { array_list.get(length + 1) }
         .to raise_error(ArrayList::OutOfBoundsError)
     end
   end
