@@ -10,11 +10,24 @@ The reason we don't have to explicitly allocate memory for arrays in Ruby is Rub
 
 ## Release 0
 
-For this challenge, you have been given an implementation of a fixed-size array in the file [fixed_array.rb](fixed_array.rb). To complete this challenge, you should implement your own adjustable-size array in the [array_list.rb](array_list.rb) file. You must build this ArrayList class using an instance or instances of FixedArray under the hood. You may not use standard Ruby arrays at all.
+For this release, you have been given an implementation of a fixed-size array in the file [fixed_array.rb](fixed_array.rb). To complete this challenge, you should implement your own adjustable-size array in the [array_list.rb](array_list.rb) file. You must build this ArrayList class using an instance or instances of FixedArray under the hood. You may not use standard Ruby arrays at all.
+
+Your ArrayList class must pass all the specs in [array_list_spec.rb](spec/array_list_spec.rb).
 
 ## Release 1
 
-Linked list implementation
+![linked list image](images/linked_list.png)  
+*Figure 1*. Visual representation of a linked list.
+
+A [linked list][wikipedia linked list] is a data structure made from a sequence of nodes.  In a linked list, each node contains two pieces of data: (1) a value and (2) a reference to the next node in the sequence.  The list itself contains a reference to the first node, the head.  This is displayed visually in Figure 1.
+
+We're going to build our own linked list data structure in Ruby. It must pass all the specs in [linked_list_spec.rb](spec/linked_list_spec.rb).
+
+### About Linked Lists
+
+Why use a linked list over another list structure like the array we just built?  The principal benefit of a linked list over a conventional array is that list elements can inserted and removed without reallocating or reorganizing the entire structure because the list items do not need to be stored contiguously in memory or on disk.
+
+On the other hand, linked lists do have some limitations.  Simple linked lists do not allow efficient indexing or random access to any item in the list.  Searching through the list to find a particular node is always done as a linear search, beginning with the head node and proceeding through the list.  Thus, basic operations could require scanning most or all of the list elements—for example, obtaining the last node of the list, finding a node with a given value, or locating the place where a new node should be inserted.
 
 ## Release 2
 
