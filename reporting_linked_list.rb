@@ -1,6 +1,9 @@
 require 'byebug'
+require_relative 'reportable'
 
 class ReportingLinkedList
+  include Reportable
+
   attr_reader :head, :tail
 
   def initialize(head = nil)
@@ -57,15 +60,9 @@ class ReportingLinkedList
   private
 
   attr_writer :head
-  attr_accessor :operations
 
   def tail
     ReportingLinkedList.new(head.next_link)
-  end
-
-  def record_operation(operation)
-    operations[operation] ||= 0
-    operations[operation] += 1
   end
 
   class Link
