@@ -1,29 +1,47 @@
 # Data Structures: Lists
 
-Ruby arrays are pretty convenient. It's easy to find, add, and remove elements from an array in Ruby. There's a lot going on under the hood to make it that easy. At a low level, adding, removing, and finding things in arrays isn't so simple.
+## The Humble Array
 
-At a low level, arrays always have a fixed capacity. When you create an array, you need to also tell the program how much memory it should reserve for that array. If you set aside enough memory for an 8-item array, that array will never be able to be nine items long. The amount of memory allocated sets a maximum size constraint that can never be exceeded.
+Ruby arrays are pretty convenient. It's easy to find, add, and remove elements from a Ruby array. There's a lot going on under the hood to make it that easy, but behind the scenes, adding, removing, and finding things in Ruby arrays isn't so simple.
 
-The reason we don't have to explicitly allocate memory for arrays in Ruby is Ruby handles this for us. But what if it didn't? What if we always had to specify an array's maximum capacity when we declared it?
+At a low level, whenever a program in any language wants to store something it has to ask the operating system for a piece of memory, and it has to tell the operating system how _much_ memory it wants. If the program wants to store a collection of 8 things, it might ask for 8 pieces of memory.
 
-**Thinking about questions like these is the kind of thing that comes up in job interviews a lot.**
+In lower level languages like C, arrays are fixed in size. You can say "I want an array of 8 things", but you can't add a 9th thing onto the array and expect it to grow. In truth, what Ruby calls an Array is sort of an array on steroids. Ruby arrays are actually using true, "fixed" arrays underneath, but you've never had to worry about it.
 
-## Release 0
+But how does it do that? If arrays are truly fixed in size, how is it possible that Ruby's Array class seems to grow indefinitely, with no concern for the idea of a fixed capacity?
 
-For this release, you have been given an implementation of a fixed-size array in the file [fixed_array.rb](fixed_array.rb). To complete this challenge, you should implement your own adjustable-size array in the [array_list.rb](array_list.rb) file. You must build this ArrayList class using an instance or instances of FixedArray under the hood. You may not use standard Ruby arrays at all.
+It's up to you to find out. You've been provided with a class called [FixedArray](fixed_array.rb). FixedArray emulates in Ruby what a "true" array is like under the hood. In these challenges you are free to used FixedArray objects, but you cannot use Ruby's standard array (`[]`).
 
-Your ArrayList class must pass all the specs in [array_list_spec.rb](spec/array_list_spec.rb).
+Why? Classic data structures and the algorithms that interact with them assume low-level, fixed arrays. The data structures don't assume you're in a user-friendly language like Ruby, so we're going to pretend we aren't.
 
-## Release 1
+Questions about data structures and algorithms come up in interviews _a lot_. This is your chance to get ahead of the curve and study up on some of the classics.
 
-![linked list image](images/linked_list.png)  
-*Figure 1*. Visual representation of a linked list.
+## Release 0: FixedArray
 
-A [linked list][wikipedia linked list] is a data structure made from a sequence of nodes.  In a linked list, each node contains two pieces of data: (1) a value and (2) a reference to the next node in the sequence.  The list itself contains a reference to the first node, the head.  This is displayed visually in Figure 1.
+Before you begin, familiarize yourself with the FixedArray class and its specs. You might load it up in IRB or a runner file to play around with it.
 
-We're going to build our own linked list data structure in Ruby. It must pass all the specs in [linked_list_spec.rb](spec/linked_list_spec.rb). You will note that the specs are almost identical to those for the array list. Linked lists and array lists can have identical interfaces, but work differently under the hood.
+## Release 1: The Dynamic Array
+
+__Note: I think DynamicArray would be more intuitive than ArrayList. What do you think?__
+
+__Note: This text should probably just be rolled into the challenge__
+
+We're going to create a new class called a `DynamicArray`. `DynamicArray`s can grow in size to fit their contents, and don't have a fixed size. You can use an instance or instances of FixedArray to store things, but remember that you're not allowed to use Ruby's default array.
+
+-- See challenge --
+https://github.com/Devbootcamp/data-structures-array-list-challenge
+
+## Release 1: Linked List
+
+-- See challenge --
+https://github.com/Devbootcamp/data-structures-linked-list-challenge
+
+__Note: We should see about updating those challenges, as well as seeing if we can create a good common set of operations that work on them both so that we can compare later.__
 
 ### About Linked Lists
+
+__Note: I wonder if the things you describe below will be better introduced after they've explored the operations in release 2. I'd like them to first discover the discrepancy and wonder why, including providing a hypothesis, before we lay it all out__
+
 
 Why use a linked list over another list structure like the array we just built?  The principal benefit of a linked list over a conventional array is that list elements can inserted and removed without reallocating or reorganizing the entire structure because the list items do not need to be stored contiguously in memory or on disk.
 
