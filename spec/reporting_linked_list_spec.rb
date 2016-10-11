@@ -34,6 +34,7 @@ describe ReportingLinkedList do
     it "inserts item at index" do
       expect(linked_list.get(2)).to eq(:new_item)
       expect(linked_list.length).to eq(5)
+      linked_list.print_operations_data
     end
 
     it "shifts following items right" do
