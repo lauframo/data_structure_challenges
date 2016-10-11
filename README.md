@@ -21,7 +21,7 @@ Your ArrayList class must pass all the specs in [array_list_spec.rb](spec/array_
 
 A [linked list][wikipedia linked list] is a data structure made from a sequence of nodes.  In a linked list, each node contains two pieces of data: (1) a value and (2) a reference to the next node in the sequence.  The list itself contains a reference to the first node, the head.  This is displayed visually in Figure 1.
 
-We're going to build our own linked list data structure in Ruby. It must pass all the specs in [linked_list_spec.rb](spec/linked_list_spec.rb).
+We're going to build our own linked list data structure in Ruby. It must pass all the specs in [linked_list_spec.rb](spec/linked_list_spec.rb). You will note that the specs are almost identical to those for the array list. Linked lists and array lists can have identical interfaces, but work differently under the hood.
 
 ### About Linked Lists
 
