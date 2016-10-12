@@ -18,13 +18,13 @@ module Reportable
     puts
   end
 
-  private
-
-  attr_accessor :operations
-
   def total_operations
     operations.values.inject(&:+)
   end
+
+  private
+
+  attr_accessor :operations
 
   def record_operation(operation)
     operations[operation] ||= 0

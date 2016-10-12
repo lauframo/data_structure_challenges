@@ -18,13 +18,39 @@ describe ArrayList do
       expect(array_list.get(0)).to eq("hi")
     end
 
+    it "overwrites previous value" do
+      array_list.set(0, "hi")
+      array_list.set(0, "hello")
+      expect(array_list.get(0)).to eq("hello")
+      expect(array_list.length).to eq(1)
+    end
+
     it "fails on an index < 0" do
       expect { array_list.set(-1, "hi") }
         .to raise_error(ArrayList::OutOfBoundsError)
     end
+  end
+
+  context "#insert" do
+    it "inserts the value" do
+      array_list.insert(0, "hi")
+      expect(array_list.get(0)).to eq("hi")
+    end
+
+    it "shifts other values right" do
+      array_list.insert(0, "hi")
+      array_list.insert(0, "hello")
+      expect(array_list.get(0)).to eq("hello")
+      expect(array_list.get(1)).to eq("hi")
+    end
+
+    it "fails on an index < 0" do
+      expect { array_list.insert(-1, "hi") }
+        .to raise_error(ArrayList::OutOfBoundsError)
+    end
 
     it "expands array for an index > size-1" do
-      array_list.set(5, "hi")
+      array_list.insert(5, "hi")
       expect(array_list.get(5)).to eq("hi")
       expect(array_list.get(0)).to eq(nil)
     end
@@ -32,7 +58,7 @@ describe ArrayList do
 
   context "#get" do
     it "gets the value" do
-      array_list.set(0, "hi")
+      array_list.insert(0, "hi")
       expect(array_list.get(0)).to eq("hi")
     end
 
