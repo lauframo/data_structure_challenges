@@ -1,7 +1,7 @@
-require_relative '../fixed_array'
+require_relative 'spec_helper'
 
 describe FixedArray do
-  let(:max_size) { 32 }
+  let(:max_size) { 8 }
   let(:fixed_arr) { FixedArray.new(max_size) }
 
   context "#size" do

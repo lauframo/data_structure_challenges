@@ -11,7 +11,7 @@ List
    — Compare Big-O (we need a resource)
    - Measuring Efficiency
     - Counter: you try and guest what these counts will be, then look at what happens for real by printing the counts
-    — Relate it back to Big-O and actually see it 
+    — Relate it back to Big-O and actually see it
     - Big data set
 
 Tree
