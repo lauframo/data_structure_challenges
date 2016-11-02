@@ -4,7 +4,7 @@ class Node
   extend Reporter
   attr_accessor :element
 
-  def initialize(element)
+  track def initialize(element)
     @element = element
     @next = nil
   end
