@@ -18,12 +18,12 @@ describe FixedArray do
 
     it "fails on an index < 0" do
       expect { fixed_arr.set(-1, "hi") }
-        .to raise_error(FixedArray::OutOfBoundsError)
+        .to raise_error(OutOfBoundsError)
     end
 
     it "fails on an index > size-1" do
       expect { fixed_arr.set(max_size + 1, "hi") }
-        .to raise_error(FixedArray::OutOfBoundsError)
+        .to raise_error(OutOfBoundsError)
     end
   end
 
@@ -35,12 +35,12 @@ describe FixedArray do
 
     it "fails on an index < 0" do
       expect { fixed_arr.get(-1) }
-        .to raise_error(FixedArray::OutOfBoundsError)
+        .to raise_error(OutOfBoundsError)
     end
 
     it "fails on an index > size-1" do
       expect { fixed_arr.get(max_size + 1) }
-        .to raise_error(FixedArray::OutOfBoundsError)
+        .to raise_error(OutOfBoundsError)
     end
   end
 end
