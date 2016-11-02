@@ -1,4 +1,5 @@
 require_relative 'exceptions'
+require_relative 'node'
 
 class LinkedList
   attr_reader :length
