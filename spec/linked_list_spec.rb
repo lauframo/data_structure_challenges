@@ -96,5 +96,13 @@ describe LinkedList do
       expect { my_list.insert(3, "new_thing") }
         .to raise_error(OutOfBoundsError)
     end
+
+    it "can insert at the front of the list" do
+      my_list.insert(0, "new_thing")
+      expect(my_list.get(0)).to eq("new_thing")
+      expect(my_list.get(1)).to eq("thing_1")
+      expect(my_list.get(2)).to eq("thing_2")
+      expect(my_list.get(3)).to eq("thing_3")
+    end
   end
 end
