@@ -32,7 +32,10 @@ class ArrayList
     raise OutOfBoundsError if index >= length
     expand_array_capacity if length == fixed_array.size
 
-    shift_items_right_from(index)
+    last_index.downto(index).each do |i|
+      fixed_array.set(i+1, get(i))
+    end
+
     fixed_array.set(index, value)
     self.length += 1
 
@@ -53,22 +56,6 @@ class ArrayList
 
   attr_accessor :fixed_array
   attr_writer :length
-
-  def shift_items_right_from(index)
-    last_index.downto(index).each do |i|
-      move_item_right(i)
-    end
-  end
-
-  def move_item_right(index)
-    value = get(index)
-    if index == last_index
-      add(value)
-    else
-      set(index + 1, value)
-    end
-    set(index, nil)
-  end
 
   def expand_array_capacity
     new_array = FixedArray.new(fixed_array.size * 2)
