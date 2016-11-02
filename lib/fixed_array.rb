@@ -1,19 +1,21 @@
 require_relative 'exceptions'
+require_relative 'reporter'
 
 class FixedArray
+  extend Reporter
   attr_reader :size
 
-  def initialize(size)
+  track def initialize(size)
     @size = size
     @contents = []
   end
 
-  def get(index)
+  track def get(index)
     raise_out_of_bounds(index) if out_of_bounds?(index)
     return contents[index]
   end
 
-  def set(index, value)
+  track def set(index, value)
     raise_out_of_bounds(index) if out_of_bounds?(index)
     contents[index] = value
   end
