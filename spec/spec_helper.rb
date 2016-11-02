@@ -1,2 +1,5 @@
 require_relative '../lib/fixed_array'
 require_relative '../lib/exceptions'
+require_relative '../lib/array_list'
+require_relative '../lib/node'
+require_relative '../lib/linked_list'
